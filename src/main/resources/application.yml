@@ -1,0 +1,11 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: account-service
+  profiles:
+    active: mock-data
+  jpa:
+    generate-ddl: true
+    show-sql: true
