@@ -1,2 +1,3 @@
 # Sample app to demo service-virtualization using WireMock
 [![Build Status](https://travis-ci.org/svc-virtualization-wiremock/account-service.png)](https://travis-ci.org/svc-virtualization-wiremock/account-service)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=io.api.rest.virtualization%3Aaccount-service&metric=alert_status)](https://sonarcloud.io/dashboard/index/io.api.rest.virtualization:account-service)
