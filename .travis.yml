@@ -7,12 +7,12 @@ cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.sonar/cache'
-z
+
 addons:
   sonarcloud:
     organization: sudhirtumati-github
     token:
-      secure: "ltPihbh8bKTabYz6irwUALBsHhltvvuFlrH5fKvk1HSaC61WJaCLAq5Ht/2P9tJrp7L5JxZSUu2xatRL28lY+bcUhVnauJ7akHZeQAdPoMudbAZKAUhs3gGUefCWAiZ+ZRPQkBp5PrK4CHtQUIHS96IW4B+Kx64j9e20Wovu502iQcH/SBgmlAi0TWwhdbSKG2VA4wsmMEn4U49S5SsDQeUEhwN5Nw33SwV5sXk4kSADqvjxn1a1T5aqpjDsv71o9TEm0EmUPYRo/ZtDlMFOHG76BKGDawB9d8rI4fDORU7m8XoyXpfv8hn1e+BHmI4q5ZtUTAWcabnlmKyUMRzNFKthsEYvFzrDyoEWmqwFVt/HY1qPw3vwgQ7wUAANQq3MIPnth5odv36I3uEK5SRevjv5c7dlHs5rAfNmNqUgh31KBx8vAYPxVLlP4Ya0etMEa4EMpheOegKp94irmXMlY3Ixkp+Cn8fPAXEBZ0zVyO3jvGGq163w9qXNNgzONyj5sLnW0It3oZq2Gn1Pi81kRnaYXl7EPk0AmvURBpM86U6jPjFpk4q3qtygQymeZsEkC0YWBO1qK9/Q/G/kTS2gKTubCKWTnv95H0AfuJNj80GwQOSo2+Zw5UORFFDlkxl0pl8CFhwIIK3joLjX+V9SqblXgHkwr4ZEwyVAnqOv4Yc="
+      secure: ${SONAR_TOKEN}
 
 script:
    - mvn org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
