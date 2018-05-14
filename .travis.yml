@@ -1,14 +1,18 @@
 language: java
+
 jdk:
   - oraclejdk8
+
 cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.sonar/cache'
+
 addons:
   sonarcloud:
     organization: sudhirtumati-github
     token:
       secure: sCuxYxCTnO0qkdVDHM0Q0+Ho5sLxEVMZV6HxUX6TWmnkvReJ2tj971As2cEcB0qNKHEL+vk+PKp8ChVlG21JjERwDyvfa2gmmcwRE7pre5Pp5ID5M3HHqPssBNgGxlR2O3DtNJLfPQK/ZLXiDzhzb4wpVIch+y9TCVMpj8b0ShIlkgKRYYlhVZD/F5nYibkPAQ8jWP+KWqQfGyejkoOMFsMMS88dR8cYZHoec5r0yx/l92VORs/BfsGC+P90RopWoWvnVOpBeAwnNmeG04lbS2L8c3lwiX3I5l9DtPFbRcVdOSAsDIHwN8Jj/9ZqdEZIkXK5DGQS65jS9pc95ohI2d/RwAZdwUfTHsW5PFTBH+ejsefXnWTMKfNbr3caabwtZG/c2jIWz1mGec0pEtaCoC4bU5ypZIkXrrnfELzi/p2Xig3J+oQhfl8tdT8Ahgby8VXVME6o00kKOI7olfZZ6LDZq11dfXHh2fLHGEk0UxSf5QiOQxgfhQG0N0B78RbtlB+3kVzJbrXVjXkfgzjNECxXH1mMjdnOa35tRcqBeFTSKT7zLo7bXRl5ihgYpMMyq+Vq9PC9iz0reo2CZpAMhXQsIHerG6eDrmgAuvz7iXNR1Xb/dmL63YCht/NisBkP8iO3yL3FdLCpZpmSYXWThr94V+D2wrpIe7ON7TPuqNc=
+
 script:
    - mvn org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
